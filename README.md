@@ -2,7 +2,7 @@
 Original App Design Project - README Template
 ===
 
-# APP_NAME_HERE
+
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -12,7 +12,8 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+[PetNeeds aim to help pet owners to locate places around them that is needed for their pet]
+
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
@@ -29,39 +30,52 @@ Original App Design Project - README Template
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Splash screen
+* Main screen with the search bar and map
+* Detail screen where the option will be shown with more information
+
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Login screen
+* Register screen
+* Profile screen
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* [Splash screen]
+   * display the app logo 
+   * display the app name
+* [Main screen]
+   * search bar
+   * dropdown menu
+   * maps
+   * recycle view
+* [Detail screen]
+   * image of the place
+   * address
+   * phone number
+   * hours of operation
+   * rating
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* [Logo screen]
+* [Main screen]
+* [Screach Place]
+* [detailed options]
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* [Logo screen]
+   * [Login/Register] OPTIONAL
+   * [Main screen]
+   
+* [Main screen]
+   * [Detail screen]
+   * [Profile screen] OPTIONAL
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
