@@ -78,12 +78,8 @@ Original App Design Project - README Template
    * [Profile screen] OPTIONAL
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="https://github.com/zinaheng/PetNeeds/blob/master/Pet%20Needs.jpg" width=2000>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
+<img src="https://github.com/zinaheng/PetNeeds/blob/master/Pet%20Needs.jpg" width=2200>
 
 ## Schema 
 [This section will be completed in Unit 9]
