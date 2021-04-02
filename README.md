@@ -79,7 +79,7 @@ Original App Design Project - README Template
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://github.com/zinaheng/PetNeeds/blob/master/Pet%20Needs.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
