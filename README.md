@@ -80,6 +80,7 @@ Original App Design Project - README Template
 * [Stream screen]
    * [Detail screen]
    * [Profile screen] OPTIONAL
+   * [Community chat] OPTIONAL
 
 ## Wireframes
 
