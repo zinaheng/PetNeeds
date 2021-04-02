@@ -31,7 +31,7 @@ Original App Design Project - README Template
 **Required Must-have Stories**
 
 * Splash screen displays logo and name.
-* User can enter their zipcode in a search bar to find businesses neear them.
+* User can enter their zipcode in a search bar to find businesses near them.
 * User can choose business categories from a dropdown menu.
 * User can scroll through suggested businesses in a list.
 * User is sent to a detail screen where the business they select will be shown with more information
