@@ -109,7 +109,8 @@ Model: Post
   List fo network requests by each screen
   * Main Feed
       * (Read/GET) query all the businesses by Zipcode 
-      * https://github.com/zinaheng/PetNeeds/blob/master/Screen%20Shot%202021-04-09%20at%206.33.12%20PM.png  
+      * ![Screen Shot 2021-04-09 at 6 33 12 PM](https://user-images.githubusercontent.com/44506873/114250398-32525280-9963-11eb-8980-d0b2a6b7f8a1.png)
+
   * Details Feed
       * (Read/Get) query business detail information!
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
