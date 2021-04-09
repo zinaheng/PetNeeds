@@ -105,6 +105,11 @@ Model: Post
    | ------------- | -------- | ------------|
    | search     | Number   | search area based on zip code |
    
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+ ## Network
+  List fo network requests by each screen
+  * Main Feed
+      * (Read/GET) query all the businesses by Zipcode 
+      * https://github.com/zinaheng/PetNeeds/blob/master/Screen%20Shot%202021-04-09%20at%206.33.12%20PM.png  
+  * Details Feed
+      * (Read/Get) query business detail information!
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
