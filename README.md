@@ -89,8 +89,22 @@ Original App Design Project - README Template
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
-### Networking
+Model: Post
+ | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the object that we retrieve |
+   | image         | File     | data fetched from the google maps |
+   | rating     | Number | number of ratings for business |
+   | business name | String  | name of the business |
+   | address    | String  | phone number of the business|
+   | phone number     | String | phone number of the business |
+   | time     | DateTime | business hours |
+   
+  Model: Get
+    | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | search     | Number   | search area based on zip code |
+   
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
