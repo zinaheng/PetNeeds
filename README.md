@@ -86,6 +86,8 @@ Original App Design Project - README Template
 
 <img src="https://github.com/zinaheng/PetNeeds/blob/master/Pet%20Needs.jpg" width=2200>
 
+https://www.figma.com/proto/hAGpu1mKyLV8ievdzIzLrF/Pet-Needs?node-id=9%3A2&scaling=min-zoom
+
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
