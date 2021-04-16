@@ -71,6 +71,6 @@
         android:id="@+id/imageView2"
         android:layout_width="86dp"
         android:layout_height="137dp"
-        tools:srcCompat="@drawable/untitled" />
+        tools:srcCompat="@drawable/untitled1" />
 
 </RelativeLayout>
