@@ -122,3 +122,9 @@ Model: Post
 The following **required** functionality is completed:
 
 - [x] Splash screen added to app to display name and logo.
+- [ ] 
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories in sprint 1:
+
+<img src= 'splashscreen.gif' width=''><br>
