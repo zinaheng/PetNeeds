@@ -116,3 +116,9 @@ Model: Post
   * Details Feed
       * (Read/Get) query business detail information!
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+## User Stories - Sprint 1
+
+The following **required** functionality is completed:
+
+- [x] Splash screen added to app to display name and logo.
