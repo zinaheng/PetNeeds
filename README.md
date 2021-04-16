@@ -121,7 +121,7 @@ Model: Post
 
 The following **required** functionality is completed:
 
-- [x] Splash screen added to app to display name and logo.
+- [x] Splash screen added to display name and logo.
 - [ ] 
 ## Video Walkthrough
 
