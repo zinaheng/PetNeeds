@@ -98,7 +98,7 @@ Model: Post
    | image         | File     | data fetched from the google maps |
    | rating     | Number | number of ratings for business |
    | business name | String  | name of the business |
-   | address    | String  | phone number of the business|
+   | address    | String  | location fetched from API|
    | phone number     | String | phone number of the business |
    | time     | DateTime | business hours |
    
