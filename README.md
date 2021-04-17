@@ -2,8 +2,6 @@
 Original App Design Project - README Template
 ===
 
-
-
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
@@ -13,7 +11,6 @@ Original App Design Project - README Template
 ## Overview
 ### Description
 [PetNeeds aim to help pet owners to locate places around them that is needed for their pet]
-
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
