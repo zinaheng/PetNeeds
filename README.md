@@ -121,10 +121,11 @@ Model: Post
 
 The following **required** functionality is completed:
 
-- [x] Splash screen added to display name and logo.
-- [ ] 
+- [x] Splash screen added to display name and logo. 
+- [x] Added google maps to the main screen
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories in sprint 1:
 
 <img src= 'splashscreen.gif' width=''><br>
+<img src= 'main_screen' width=''><br>
