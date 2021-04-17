@@ -44,8 +44,8 @@ Original App Design Project - README Template
 ### 2. Screen Archetypes
 
 * [Splash screen]
-   * display the app logo 
-   * display the app name
+   * [x] display the app logo 
+   * [x] display the app name
 * [Stream screen]
    * User can enter their zipcode in a search bar to find businesses near them.
    * User can choose business categories from a dropdown menu.
