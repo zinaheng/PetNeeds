@@ -9,24 +9,33 @@
 
     tools:context=".MainActivity">
 
-    <SearchView
-        android:id="@+id/schView"
-        android:layout_width="217dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
+    <EditText
+        android:id="@+id/etZipcode"
+        android:layout_width="162dp"
+        android:layout_height="45dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="24dp"
-        android:background="#E0EBD1"
-        android:orientation="horizontal" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="59dp"
+        android:hint="Enter zipcode" />
+
+    <ImageButton
+        android:id="@+id/searchbutton"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="59dp"
+        android:layout_toEndOf="@+id/etZipcode"
+        android:src="@android:drawable/ic_menu_search" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="133dp"
-        android:layout_height="42dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/label"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="28dp"
         android:background="#E0EFCC"
         android:text="category" />
@@ -35,21 +44,25 @@
         android:id="@+id/mapView2"
         android:layout_width="320dp"
         android:layout_height="220dp"
-        android:layout_below="@+id/schView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="68dp"
+        android:layout_below="@+id/searchbutton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
         android:background="#E6D3D3"
         android:foregroundTint="#DCEBCD" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="236dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/rvPetDetails"
+        android:layout_width="316dp"
+        android:layout_height="353dp"
         android:layout_below="@+id/mapView2"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="66dp" />
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="21dp" />
 
     <TextView
         android:id="@+id/label"
@@ -57,9 +70,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="69dp"
         android:layout_toEndOf="@+id/imageView2"
         android:background="#C7D9B2"
         android:fontFamily="sans-serif-black"
@@ -69,18 +82,17 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="86dp"
-        android:layout_height="137dp"
+        android:layout_width="8dp"
+        android:layout_height="13dp"
         tools:srcCompat="@drawable/untitled1" />
-	
+
     <fragment
-        android:layout_width="320dp"
-        android:layout_height="220dp"
-        android:layout_below="@+id/schView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="68dp"
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-    />
-
+        android:layout_width="320dp"
+        android:layout_height="220dp"
+        android:layout_below="@+id/etZipcode"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="17dp" />
 </RelativeLayout>
