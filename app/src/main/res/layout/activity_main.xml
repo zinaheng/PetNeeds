@@ -18,11 +18,13 @@
         android:layout_marginTop="59dp"
         android:hint="Enter zipcode" />
 
+
     <SearchView
         android:id="@+id/sv_location"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
@@ -30,7 +32,6 @@
         android:elevation="5dp"
         android:iconifiedByDefault="false"
         android:queryHint="Enter a zipcode" />
-
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView2"
@@ -59,13 +60,13 @@
 
     <TextView
         android:id="@+id/label"
-        android:layout_width="173dp"
-        android:layout_height="wrap_content"
+        android:layout_width="131dp"
+        android:layout_height="33dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="69dp"
+        android:layout_marginStart="206dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="66dp"
         android:layout_toEndOf="@+id/imageView2"
 
         android:fontFamily="sans-serif-black"
@@ -86,21 +87,21 @@
         android:layout_height="250dp"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="47dp"
         android:layout_marginTop="80dp" />
 
     <Spinner
         android:id="@+id/drSpin"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_width="195dp"
+        android:layout_height="26dp"
         android:layout_above="@+id/mapView2"
-        android:layout_alignStart="@+id/sv_location"
-        android:layout_alignTop="@+id/sv_location"
+        android:layout_below="@+id/label"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="9dp"
+        android:layout_toEndOf="@+id/sv_location"
         android:visibility="visible"
         tools:visibility="visible" />
 </RelativeLayout>
