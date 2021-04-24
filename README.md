@@ -114,7 +114,7 @@ Model: Post
       * (Read/Get) query business detail information!
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
-## User Stories - Sprint 1
+## User Stories - Sprint 2
 
 The following **required** functionality is completed:
 
