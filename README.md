@@ -124,4 +124,4 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories in sprint 1:
 
-<img src= 'main_screen.gif' width=''><br>
+<img src= 'walkthrough.gif' width=''><br>
