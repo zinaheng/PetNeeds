@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">PetNeeds</string>
+    <string-array name="Categories">
+        <item>Pet Stores</item>
+        <item>Trainers</item>
+        <item>Vet Hospitals</item>
+        <item>ER</item>
+        <item>Dog Parks</item>
+        <item>Grooming Salons</item>
+    </string-array>
 </resources>
+

@@ -8,8 +8,11 @@ import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
@@ -31,14 +34,14 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback,AdapterView.OnItemSelectedListener {
 
 
-    public static final String TAG ="MainActivity";
+    public static final String TAG = "MainActivity";
     static Double lng;
     static Double lat;
     List<PetInfo> info;
-
+    private Spinner sp;
     GoogleMap map;
 
     @Override
@@ -47,10 +50,32 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_main);
 
 
-
         RecyclerView rvPetDetails = findViewById(R.id.rvPetDetails);
-        final EditText enteredZip = (EditText)findViewById(R.id.etZipcode);
+        final EditText enteredZip = (EditText) findViewById(R.id.etZipcode);
         ImageButton search = findViewById(R.id.searchbutton);
+//below is the code for setting up the drop down menu
+        sp = (Spinner) findViewById(R.id.drSpin);
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, items);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.Categories, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        sp.setAdapter(adapter);
+
+
+        sp.setOnItemSelectedListener(this);
+        //    @Override
+//    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//
+//    }
+//
+//    @Override
+//    public void onNothingSelected(AdapterView<?> parent){
+//
+//    }
+//
+//}
+
+
 
         info = new ArrayList<>();
         final PetAdapter petAdapter = new PetAdapter(this, info);
@@ -60,8 +85,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String value= enteredZip.getText().toString();
-                final String ZIPCODE = "https://maps.googleapis.com/maps/api/geocode/json?address=" +value+"&key=AIzaSyA3eIDiQk5MNmPvyx62qERmyb54UzORsIg";
+                String value = enteredZip.getText().toString();
+                final String ZIPCODE = "https://maps.googleapis.com/maps/api/geocode/json?address=" + value + "&key=AIzaSyA3eIDiQk5MNmPvyx62qERmyb54UzORsIg";
                 final AsyncHttpClient client = new AsyncHttpClient();
 
                 client.get(ZIPCODE, new JsonHttpResponseHandler() {
@@ -69,11 +94,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     public void onSuccess(int i, Headers headers, JSON json) {
                         JSONObject jsonObject = json.jsonObject;
                         try {
-                            lng = ((JSONArray)jsonObject.get("results")).getJSONObject(0)
+                            lng = ((JSONArray) jsonObject.get("results")).getJSONObject(0)
                                     .getJSONObject("geometry").getJSONObject("location")
                                     .getDouble("lng");
 
-                            lat = ((JSONArray)jsonObject.get("results")).getJSONObject(0)
+                            lat = ((JSONArray) jsonObject.get("results")).getJSONObject(0)
                                     .getJSONObject("geometry").getJSONObject("location")
                                     .getDouble("lat");
 
@@ -115,11 +140,22 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-        LatLng Dallas = new LatLng(32.789444,96.791131);
+        LatLng Dallas = new LatLng(32.789444, 96.791131);
         map.addMarker(new MarkerOptions().position(Dallas).title("Dallas"));
         map.moveCamera(CameraUpdateFactory.newLatLng(Dallas));
     }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        parent.getItemAtPosition(position);
     }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+}
