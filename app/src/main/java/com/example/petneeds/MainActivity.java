@@ -40,56 +40,22 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback,AdapterView.OnItemSelectedListener {
 
-
     public static final String TAG = "MainActivity";
     static Double lng;
     static Double lat;
     List<PetInfo> info;
     private Spinner sp;
     GoogleMap map;
-    SupportMapFragment mapFragment;
-    SearchView searchView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        searchView = findViewById(R.id.sv_location);
-        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                String location = searchView.getQuery().toString();
-                List<Address>  addressList = null;
-                if(location != null || !location.equals("")){
-                    Geocoder geocoder = new Geocoder(MainActivity.this);
-                    try{
-                        addressList = geocoder.getFromLocationName(location,1);
-                    }catch (IOException e){
-                        e.printStackTrace();
-                    }
-                    Address address = addressList.get(0);
-                    LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
-                    map.addMarker(new MarkerOptions().position(latLng).title(location));
-                    map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
-
-                }
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
 
 
-
-        mapFragment.getMapAsync(this);
         RecyclerView rvPetDetails = findViewById(R.id.rvPetDetails);
         final EditText enteredZip = (EditText) findViewById(R.id.etZipcode);
-
+        ImageButton search = findViewById(R.id.searchbutton);
 //below is the code for setting up the drop down menu
         sp = (Spinner) findViewById(R.id.drSpin);
 //        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, items);
@@ -119,7 +85,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         rvPetDetails.setLayoutManager(new LinearLayoutManager(this));
         rvPetDetails.setAdapter(petAdapter);
 
-        searchView.setOnClickListener(new View.OnClickListener() {
+        search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String value = enteredZip.getText().toString();
@@ -173,13 +139,17 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 });
             }
         });
-
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-
+        LatLng Dallas = new LatLng(32.789444, 96.791131);
+        map.addMarker(new MarkerOptions().position(Dallas).title("Dallas"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(Dallas));
     }
 
     @Override
@@ -192,3 +162,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 }
+
+
+
+
+
