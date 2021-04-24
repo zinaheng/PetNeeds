@@ -118,8 +118,8 @@ Model: Post
 
 The following **required** functionality is completed:
 
-- [x] Splash screen added to display name and logo. 
-- [x] Added google maps to the main screen
+- [x] User can enter their zipcode in a search bar to find businesses near them.
+- [x] User can choose business categories from a dropdown menu
 - [x] Implemented recyclerview
 ## Video Walkthrough
 
