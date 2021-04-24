@@ -120,7 +120,7 @@ The following **required** functionality is completed:
 
 - [x] Splash screen added to display name and logo. 
 - [x] Added google maps to the main screen
-- [ ] Implemented recyclerview
+- [x] Implemented recyclerview
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories in sprint 2:
