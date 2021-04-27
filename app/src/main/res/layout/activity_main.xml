@@ -8,66 +8,79 @@
     android:background="@drawable/gradient_background"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etZipcode"
-        android:layout_width="162dp"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="59dp"
-        android:hint="Enter zipcode" />
+    <!--    <EditText-->
+    <!--        android:id="@+id/etZipcode"-->
+    <!--        android:layout_width="162dp"-->
+    <!--        android:layout_height="45dp"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_marginStart="30dp"-->
+    <!--        android:layout_marginTop="59dp"-->
+    <!--        android:hint="Enter zipcode" />-->
 
-    <ImageButton
-        android:id="@+id/searchbutton"
-        android:layout_width="40dp"
-        android:layout_height="45dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="59dp"
-        android:layout_toEndOf="@+id/etZipcode"
-        android:src="@android:drawable/ic_menu_search" />
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/searchbutton"-->
+    <!--        android:layout_width="40dp"-->
+    <!--        android:layout_height="45dp"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_marginStart="0dp"-->
+    <!--        android:layout_marginTop="59dp"-->
+    <!--        android:layout_toEndOf="@+id/etZipcode"-->
+    <!--        android:src="@android:drawable/ic_menu_search" />-->
 
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView2"
-        android:layout_width="320dp"
-        android:layout_height="220dp"
-        android:layout_below="@+id/searchbutton"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:background="#E6D3D3"
-        android:foregroundTint="#DCEBCD" />
+    <!--    <com.google.android.gms.maps.MapView-->
+    <!--        android:id="@+id/mapView2"-->
+    <!--        android:layout_width="320dp"-->
+    <!--        android:layout_height="220dp"-->
+    <!--        android:layout_below="@+id/searchbutton"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_marginStart="43dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="48dp"-->
+    <!--        android:background="#E6D3D3"-->
+    <!--        android:foregroundTint="#DCEBCD" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPetDetails"
         android:layout_width="316dp"
         android:layout_height="353dp"
-        android:layout_below="@+id/mapView2"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="49dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="200dp"
         android:layout_marginBottom="21dp" />
+
 
     <TextView
         android:id="@+id/label"
         android:layout_width="173dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="69dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="149dp"
         android:layout_toEndOf="@+id/imageView2"
-
         android:fontFamily="sans-serif-black"
         android:text="PetNeeds"
         android:textSize="24sp"
         android:textStyle="bold" />
+
+    <SearchView
+        android:id="@+id/sv_location"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_round"
+        android:elevation="5dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Enter a zip code" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -80,22 +93,18 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="320dp"
         android:layout_height="220dp"
-        android:layout_below="@+id/etZipcode"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="43dp"
-        android:layout_marginTop="18dp" />
+        android:layout_marginTop="110dp" />
 
     <Spinner
         android:id="@+id/drSpin"
-        android:layout_width="172dp"
-        android:layout_height="52dp"
-        android:layout_above="@+id/mapView2"
-        android:layout_alignStart="@+id/searchbutton"
-        android:layout_alignTop="@+id/searchbutton"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="-5dp"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="23dp"
         android:visibility="visible"
         tools:visibility="visible" />
 </RelativeLayout>
