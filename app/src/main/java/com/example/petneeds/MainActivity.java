@@ -41,6 +41,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public static final String TAG = "MainActivity";
     static Double lng;
     static Double lat;
+    static String name;
     List<PetInfo> info;
     private Spinner sp;
     GoogleMap map;
@@ -92,7 +93,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             public boolean onQueryTextSubmit(String query) {
                 String location = searchView.getQuery().toString();
                 final String ZIPCODE = "https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key=AIzaSyA3eIDiQk5MNmPvyx62qERmyb54UzORsIg";
-                List<Address> addressList = null;
+                /*List<Address> addressList = null;
                 if (location != null || !location.equals("")) {
                     Geocoder geocoder = new Geocoder(MainActivity.this);
                     try {
@@ -104,7 +105,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
                     map.addMarker(new MarkerOptions().position(latLng).title(location));
                     map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
-                }
+                }*/
 
                 final AsyncHttpClient client = new AsyncHttpClient();
 
@@ -132,6 +133,23 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                                 JSONObject jsonObject = json.jsonObject;
                                 try {
                                     JSONArray results = jsonObject.getJSONArray("results");
+
+                                    for ( int j = 0 ; j <= 5 ; j++) {
+                                        lng = ((JSONArray) jsonObject.get("results")).getJSONObject(j)
+                                                .getJSONObject("geometry").getJSONObject("location")
+                                                .getDouble("lng");
+
+                                        lat = ((JSONArray) jsonObject.get("results")).getJSONObject(j)
+                                                .getJSONObject("geometry").getJSONObject("location")
+                                                .getDouble("lat");
+                                        name = ((JSONArray) jsonObject.get("results")).getJSONObject(j)
+                                                .getString("name");
+                                        LatLng latLng = new LatLng(lat, lng);
+                                        map.addMarker(new MarkerOptions().position(latLng).title(name));
+                                        map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
+                                    }
+
+
                                     Log.i(TAG, "RESULTS:" + results.toString());
                                     info.clear();
                                     info.addAll(PetInfo.fromJsonArray(results));
