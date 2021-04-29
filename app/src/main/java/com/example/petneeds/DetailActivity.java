@@ -10,8 +10,12 @@ import android.widget.TextView;
 public class DetailActivity extends AppCompatActivity {
 
     ImageView imgView;
-    TextView nameView,adView,phView,hView;
+    TextView nameView;
     RatingBar rtBar;
+    TextView adView;
+    TextView phView;
+    TextView hView;
+
 
 
     @Override
@@ -20,10 +24,18 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         imgView =findViewById(R.id.imgView);
-        rtBar = findViewById(R.id.rtBar);
         nameView = findViewById(R.id.nameView);
+        rtBar = findViewById(R.id.rtBar);
         adView = findViewById(R.id.adView);
         phView = findViewById(R.id.phView);
         hView = findViewById(R.id.hView);
+
+
+        String name = getIntent().getStringExtra("name");
+        String vicinity = getIntent().getStringExtra("vicinity");
+        nameView.setText(name);
+        adView.setText(vicinity);
+
+
     }
 }
