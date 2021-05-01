@@ -114,13 +114,13 @@ Model: Post
       * (Read/Get) query business detail information!
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
-## User Stories - Sprint 2
+## User Stories - Sprint 3
 
 The following **required** functionality is completed:
 
-- [x] User can enter their zipcode in a search bar to find businesses near them.
-- [x] User can choose business categories from a dropdown menu
-- [x] Implemented recyclerview
+- [x] Implemented the navigation from MainActivity to DetailActivity
+- [x] Implemented the list view in DetailActivity
+- [x] Updated the map pin
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories in sprint 2:
