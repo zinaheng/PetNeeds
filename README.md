@@ -125,4 +125,4 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories in sprint 2:
 
-<img src= 'walkthrough.gif' width=''><br>
+<img src= 'petneeds_walkthrough.gif' width=''><br>
