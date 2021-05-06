@@ -42,16 +42,17 @@
     <!--        android:background="#E6D3D3"-->
     <!--        android:foregroundTint="#DCEBCD" />-->
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPetDetails"
         android:layout_width="316dp"
         android:layout_height="353dp"
+        android:layout_below="@+id/map"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="49dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="27dp"
         android:layout_marginBottom="21dp" />
-
 
     <TextView
         android:id="@+id/label"
@@ -80,7 +81,7 @@
         android:background="@drawable/bg_round"
         android:elevation="5dp"
         android:iconifiedByDefault="false"
-        android:queryHint="Enter a zip code" />
+        android:queryHint="" />
 
     <ImageView
         android:id="@+id/imageView2"
