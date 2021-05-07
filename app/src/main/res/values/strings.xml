@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">PetNeeds</string>
     <string name="map_key" translatable="false">AIzaSyCRinuZCwJtyXYvMDE1S5Ex3cst6JJB_7c</string>
+    <string name="place_key">AIzaSyC45Jm9tsehOX-T0v39iW7zod1hKGoru_c</string>
     <string-array name="Categories">
         <item>Pet Stores</item>
         <item>Trainers</item>

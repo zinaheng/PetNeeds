@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,6 +52,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
         TextView tvName;
         TextView tvVicinity;
         RelativeLayout container;
+        ImageView imgView;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -58,6 +60,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
             tvName = itemView.findViewById(R.id.tvName);
             tvVicinity = itemView.findViewById(R.id.tvVicinity);
             container = itemView.findViewById(R.id.container);
+
 
 
 

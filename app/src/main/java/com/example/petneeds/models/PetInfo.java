@@ -10,10 +10,17 @@ import java.util.List;
 public class PetInfo {
     String name;
     String vicinity;
+//    String photos;
+//    double rating;
+
+    public  PetInfo(){ }
+
 
     public PetInfo(JSONObject jsonObject) throws JSONException {
         name = jsonObject.getString("name");
         vicinity = jsonObject.getString("vicinity");
+//        photos = jsonObject.getString("photos");
+//        rating = jsonObject.getDouble("rating");
 
     }
 
@@ -33,4 +40,11 @@ public class PetInfo {
     public String getVicinity() {
         return vicinity;
     }
+
+//    public String getPhotos(){
+//        return String.format("https://maps.google.com/maps/contrib/%s",photos);
+//    }
+//    public double getRating() {
+//        return rating;
+//    }
 }
