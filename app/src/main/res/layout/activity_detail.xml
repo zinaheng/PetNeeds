@@ -41,9 +41,12 @@
         style="@style/Widget.AppCompat.RatingBar.Indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="#FDD835"
         tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="313dp"
-        android:layout_marginLeft="100dp"/>
+        tools:layout_editor_absoluteY="313dp" />
 
     <TextView
         android:id="@+id/adView"

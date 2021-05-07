@@ -2,10 +2,12 @@ package com.example.petneeds.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcel;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.petneeds.DetailActivity;
 import com.example.petneeds.R;
 import com.example.petneeds.models.PetInfo;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -53,12 +57,14 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
         TextView tvVicinity;
         RelativeLayout container;
         ImageView imgView;
+        RatingBar rtBar;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvName = itemView.findViewById(R.id.tvName);
             tvVicinity = itemView.findViewById(R.id.tvVicinity);
+
             container = itemView.findViewById(R.id.container);
 
 
@@ -76,7 +82,9 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
 //                    //Navigate to a new activity on tap
                     Intent i = new Intent(context, DetailActivity.class);
                     i.putExtra("name",pInfo.getName());
+                    i.putExtra("pInfo", Parcels.wrap(pInfo));
                     i.putExtra("vicinity",pInfo.getVicinity());
+                    i.putExtra("rating",pInfo.getRating());
                     context.startActivity(i);
 
                 }

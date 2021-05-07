@@ -39,15 +39,16 @@ public class DetailActivity extends AppCompatActivity {
 
         String name = getIntent().getStringExtra("name");
         String vicinity = getIntent().getStringExtra("vicinity");
+//      double
+        PetInfo pInfo = Parcels.unwrap(getIntent().getParcelableExtra("pInfo"));
         nameView.setText(name);
         adView.setText(vicinity);
-//        PetInfo petInfo = Parcels.unwrap(getIntent().getParcelableExtra("petInfo"));
 ////        String name = getIntent().getStringExtra("name");
 //        String vicinity = getIntent().getStringExtra("vicinity");
 //        nameView.setText(petInfo.getName());
 //        adView.setText(petInfo.getVicinity());
-//        rtBar.setRating(rating);
-//        rtBar.setRating((float) petInfo.getRating());
+//        rtBar.setRating((float) rating);
+        rtBar.setRating((float) pInfo.getRating());
 //        imgView.setText
 //        String photos = getIntent().getStringExtra("photos");
 

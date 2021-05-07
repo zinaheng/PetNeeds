@@ -3,15 +3,16 @@ package com.example.petneeds.models;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Parcel
 public class PetInfo {
     String name;
     String vicinity;
 //    String photos;
-//    double rating;
+    double rating;
 
     public  PetInfo(){ }
 
@@ -20,7 +21,7 @@ public class PetInfo {
         name = jsonObject.getString("name");
         vicinity = jsonObject.getString("vicinity");
 //        photos = jsonObject.getString("photos");
-//        rating = jsonObject.getDouble("rating");
+        rating = jsonObject.getDouble("rating");
 
     }
 
@@ -41,10 +42,21 @@ public class PetInfo {
         return vicinity;
     }
 
-//    public String getPhotos(){
-//        return String.format("https://maps.google.com/maps/contrib/%s",photos);
+    public double getRating() {
+        return rating;
+    }
+//    public String getName() {
+//        return name;
 //    }
+//
+//    public String getVicinity() {
+//        return vicinity;
+//    }
+//
+////    public String getPhotos(){
+////        return String.format("https://maps.google.com/maps/contrib/%s",photos);
+////    }
 //    public double getRating() {
 //        return rating;
-//    }
-}
+    }
+
