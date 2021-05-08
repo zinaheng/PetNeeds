@@ -51,7 +51,11 @@ public class DetailActivity extends AppCompatActivity {
 //        String imageUrl;
 //        imageUrl=pInfo.getPhotos();
 //        Glide.with(this).load(imageUrl).into(imgView);
-//
+
+        String imageUrl;
+        imageUrl=pInfo.getPhotos();
+        Glide.with(this).load(imageUrl).into(imgView);
+
         String photos = getIntent().getStringExtra("photos");
 
 

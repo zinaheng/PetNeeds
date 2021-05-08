@@ -11,9 +11,10 @@ import java.util.List;
 public class PetInfo {
     String name;
     String vicinity;
-//    String photos;
+    String photos;
     double rating;
     String hours;
+    String photoRef;
 
     public PetInfo() {
     }
@@ -22,10 +23,17 @@ public class PetInfo {
     public PetInfo(JSONObject jsonObject) throws JSONException {
         name = jsonObject.getString("name");
         vicinity = jsonObject.getString("vicinity");
-//        photos = jsonObject.getString("photos");
+        //photos = jsonObject.getString("photos");
         rating = jsonObject.getDouble("rating");
 
-        hours = String.valueOf(jsonObject.get("opening_hours").equals("open_now"));
+        //hours = String.valueOf(jsonObject.get("opening_hours").equals("open_now"));
+
+        if(jsonObject.has("photos")){
+            photoRef =jsonObject.getJSONArray("photos").getJSONObject(0).getString("photo_reference");
+        }else{
+            photoRef= "ATtYBwJxNpa9AS2fVJBMJryyIeV-e_UlyfmeAmrkFQ999zsADk-lLhV2SBWXqQpO88Ppo9laJNzWY4xxbQsRvuBBeCe_bLCbzEwHDb2IGRsOk48JXViFIOvH9yQycFv5mrXtApsGFQjkoW60juWX8QhE68ACfCJBJYy3RGYPtDzVu0Rjq4v7";
+        }
+
 
 
     }
@@ -51,9 +59,9 @@ public class PetInfo {
         return rating;
     }
 
-//    public String getPhotos() {
-//        return String.format("https://maps.google.com/maps/contrib/w342/%s",photos);
-//    }
+    public String getPhotos() {
+        return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoRef +"&key=AIzaSyA3eIDiQk5MNmPvyx62qERmyb54UzORsIg";
+    }
 
     public String getHours() {
         if(hours == "true"){
@@ -64,7 +72,4 @@ public class PetInfo {
         }
     }
 }
-
-
-
 
