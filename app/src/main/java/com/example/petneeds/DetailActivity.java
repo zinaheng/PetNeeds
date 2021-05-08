@@ -48,9 +48,9 @@ public class DetailActivity extends AppCompatActivity {
         adView.setText(vicinity);
         rtBar.setRating((float) pInfo.getRating());
         hView.setText(open_now);
-        String imageUrl;
-        imageUrl=pInfo.getPhotos();
-        Glide.with(this).load(imageUrl).into(imgView);
+//        String imageUrl;
+//        imageUrl=pInfo.getPhotos();
+//        Glide.with(this).load(imageUrl).into(imgView);
 //
         String photos = getIntent().getStringExtra("photos");
 

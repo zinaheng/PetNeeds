@@ -89,7 +89,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
                     i.putExtra("pInfo", Parcels.wrap(pInfo));
                     i.putExtra("vicinity",pInfo.getVicinity());
                     i.putExtra("rating",pInfo.getRating());
-                    i.putExtra("photos",pInfo.getPhotos());
+//                    i.putExtra("photos",pInfo.getPhotos());
                     i.putExtra("open_now",pInfo.getHours());
 
                     context.startActivity(i);

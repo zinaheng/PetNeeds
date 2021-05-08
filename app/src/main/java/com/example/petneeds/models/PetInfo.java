@@ -11,7 +11,7 @@ import java.util.List;
 public class PetInfo {
     String name;
     String vicinity;
-    String photos;
+//    String photos;
     double rating;
     String hours;
 
@@ -22,7 +22,7 @@ public class PetInfo {
     public PetInfo(JSONObject jsonObject) throws JSONException {
         name = jsonObject.getString("name");
         vicinity = jsonObject.getString("vicinity");
-        photos = jsonObject.getString("photos");
+//        photos = jsonObject.getString("photos");
         rating = jsonObject.getDouble("rating");
 
         hours = String.valueOf(jsonObject.get("opening_hours").equals("open_now"));
@@ -51,9 +51,9 @@ public class PetInfo {
         return rating;
     }
 
-    public String getPhotos() {
-        return String.format("https://maps.google.com/maps/contrib/w342/%s",photos);
-    }
+//    public String getPhotos() {
+//        return String.format("https://maps.google.com/maps/contrib/w342/%s",photos);
+//    }
 
     public String getHours() {
         if(hours == "true"){
