@@ -2,12 +2,15 @@ package com.example.petneeds;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+
+import com.bumptech.glide.Glide;
 import com.example.petneeds.models.PetInfo;
 
 import org.parceler.Parcels;
@@ -39,18 +42,18 @@ public class DetailActivity extends AppCompatActivity {
 
         String name = getIntent().getStringExtra("name");
         String vicinity = getIntent().getStringExtra("vicinity");
-//      double
+        String open_now = String.valueOf((getIntent().getStringExtra("open_now")));
         PetInfo pInfo = Parcels.unwrap(getIntent().getParcelableExtra("pInfo"));
         nameView.setText(name);
         adView.setText(vicinity);
-////        String name = getIntent().getStringExtra("name");
-//        String vicinity = getIntent().getStringExtra("vicinity");
-//        nameView.setText(petInfo.getName());
-//        adView.setText(petInfo.getVicinity());
-//        rtBar.setRating((float) rating);
         rtBar.setRating((float) pInfo.getRating());
-//        imgView.setText
-//        String photos = getIntent().getStringExtra("photos");
+        hView.setText(open_now);
+        String imageUrl;
+        imageUrl=pInfo.getPhotos();
+        Glide.with(this).load(imageUrl).into(imgView);
+//
+        String photos = getIntent().getStringExtra("photos");
+
 
 
     }

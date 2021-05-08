@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.petneeds.DetailActivity;
 import com.example.petneeds.R;
 import com.example.petneeds.models.PetInfo;
@@ -75,16 +76,22 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
         public void bind(PetInfo pInfo) {
             tvName.setText(pInfo.getName());
             tvVicinity.setText(pInfo.getVicinity());
+
             //Register click listener on the whole row
             container.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 //                    //Navigate to a new activity on tap
+
                     Intent i = new Intent(context, DetailActivity.class);
+
                     i.putExtra("name",pInfo.getName());
                     i.putExtra("pInfo", Parcels.wrap(pInfo));
                     i.putExtra("vicinity",pInfo.getVicinity());
                     i.putExtra("rating",pInfo.getRating());
+                    i.putExtra("photos",pInfo.getPhotos());
+                    i.putExtra("open_now",pInfo.getHours());
+
                     context.startActivity(i);
 
                 }
