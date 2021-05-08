@@ -10,7 +10,8 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[PetNeeds aim to help pet owners to locate places around them that is needed for their pet]
+[PetNeeds aim to help pet owners to locate places around them that is needed for their pet
+the type of businesses the app support are:pet store,vet,dog park]
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
