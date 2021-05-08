@@ -10,7 +10,8 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[PetNeeds aim to help pet owners to locate places around them that is needed for their pet]
+[PetNeeds aim to help pet owners to locate places around them that is needed for their pet
+the type of businesses the app support are:pet store,vet,dog park]
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
@@ -28,8 +29,8 @@ Original App Design Project - README Template
 **Required Must-have Stories**
 
 * Splash screen displays logo and name.
-* User can enter their zipcode in a search bar to find businesses near them.
-* User can choose business categories from a dropdown menu.
+* User can use their current location to find businesses near them.
+* User can enter the type of the business looking for in the search bar.
 * User can scroll through suggested businesses in a list.
 * User is sent to a detail screen where the business they select will be shown with more information
 
@@ -49,15 +50,13 @@ Original App Design Project - README Template
 * [Stream screen]
    * [x] User can enter their zipcode in a search bar to find businesses near them.
    * [x] User can choose business categories from a dropdown menu.
-   * user can scroll through suggested businesses in a list.
+   * [x]user can scroll through suggested businesses in a list.
 * [Maps]
-   * Business that fit the category and are close to the user location are diplayed on the map.
+   * [x] Business that fit the category and are close to the user location are diplayed on the map.
 * [Detail screen]
-   * image of the place
-   * address
-   * phone number
-   * hours of operation
-   * rating
+   * [x] address
+   * [x] hours of operation
+   * [x] rating
 
 ### 3. Navigation
 
