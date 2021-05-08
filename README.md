@@ -113,13 +113,13 @@ Model: Post
       * (Read/Get) query business detail information!
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
-## User Stories - Sprint 3
+## User Stories - Sprint 4
 
 The following **required** functionality is completed:
 
-- [x] Implemented the navigation from MainActivity to DetailActivity
-- [x] Implemented the list view in DetailActivity
-- [x] Updated the map pin
+- [x] Finished DetailActivity
+- [x] Tested app
+- [x] Updated UI
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories in sprint 2:
