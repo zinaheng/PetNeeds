@@ -29,7 +29,7 @@ Original App Design Project - README Template
 
 * Splash screen displays logo and name.
 * User can use their current location to find businesses near them.
-* User can enter the trype of the business looking for in the search bar.
+* User can enter the type of the business looking for in the search bar.
 * User can scroll through suggested businesses in a list.
 * User is sent to a detail screen where the business they select will be shown with more information
 
