@@ -49,15 +49,13 @@ Original App Design Project - README Template
 * [Stream screen]
    * [x] User can enter their zipcode in a search bar to find businesses near them.
    * [x] User can choose business categories from a dropdown menu.
-   * user can scroll through suggested businesses in a list.
+   * [x]user can scroll through suggested businesses in a list.
 * [Maps]
-   * Business that fit the category and are close to the user location are diplayed on the map.
+   * [x] Business that fit the category and are close to the user location are diplayed on the map.
 * [Detail screen]
-   * image of the place
-   * address
-   * phone number
-   * hours of operation
-   * rating
+   * [x] address
+   * [x] hours of operation
+   * [x] rating
 
 ### 3. Navigation
 
