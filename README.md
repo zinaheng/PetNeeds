@@ -122,6 +122,6 @@ The following **required** functionality is completed:
 - [x] Updated UI
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories in sprint 2:
+Here's a walkthrough of implemented user stories in sprint 4:
 
 <img src= 'finalWalkthrough.gif' width=''><br>
